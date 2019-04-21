@@ -1,0 +1,13 @@
+<h2>Issue details</h2>
+<a class="gil-btn_back" ng-href="#!">❮ Back to Issues list</a>
+<div class="gil-details_content">
+    <div class="gil-avatar_wrapper">
+        <img class="gil-avatar" ng-src="{{ detailCtrl.issue.user.avatar_url }}" alt="" >
+        <p class="gil-avatar_name">{{ detailCtrl.issue.user.login }}</p>
+    </div>
+    <div>
+        <p class="gil-title_detail">{{ detailCtrl.issue.title }}</p>
+        <span class="gil-tag_{{detailCtrl.issue.state}}">{{ detailCtrl.issue.state }}</span>
+    </div>
+    <p class="gil-detail_body">{{ detailCtrl.issue.body }}</p>
+</div>

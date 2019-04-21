@@ -1,0 +1,20 @@
+<h1>Github issues list</h1>
+<ul class="gil-list">
+    <li class="gil-list_item" ng-repeat='issue in issuesCtrl.issues'>
+        <a class="gil-list_item-link" href='#!details/{{ issue.number }}' ng-click='issuesCtrl.getDetails()'>
+            <span class="gil-id">{{ issue.number }}</span>
+            <span class="gil-content">
+                <span class="gil-title">{{ issue.title }}</span>
+                <span class="gil-shortbody">{{ issue.body | limitTo:140 }}</span>
+            </span>
+            <span class="gil-avatar-container">
+                <img class="gil-list_avatar" ng-src="{{ issue.user.avatar_url }}" alt="gravatar">
+            </span>
+            <span class="gil-username">{{ issue.user.login }}</span>
+        </a>
+    </li>
+</ul>
+<div class='gil-btns_wrapper'>
+    <button class="gil-btn {{ issuesCtrl.currentPage === '1' ? 'disabled' : ''}}" ng-disabled='issuesCtrl.currentPage === 1' ng-click='issuesCtrl.prevPage()'>❮ Previous</button>
+    <button class="gil-btn {{ issuesCtrl.currentPage === issuesCtrl.lastPage ? 'disabled' : ''}}" ng-disabled='issuesCtrl.currentPage === issuesCtrl.lastPage' ng-click='issuesCtrl.nextPage()'>Next ❯</button>
+</div>

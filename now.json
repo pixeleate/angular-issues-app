@@ -1,0 +1,7 @@
+{
+    "version": 2,
+    "name": "angular-issues-app",
+    "routes": [
+        { "src": "/(.*)", "dest": "dist/$1" }
+      ]
+}

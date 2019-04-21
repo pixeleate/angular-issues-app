@@ -1,0 +1,24 @@
+{
+  "name": "rackspace",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "webpack-dev-server --open",
+    "bundle": "webpack && cp app/*.html dist/ && cp app/*.css dist/ && cp -r app/views dist/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-route": "^1.7.8",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "raw-loader": "^2.0.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
